@@ -50,37 +50,37 @@ namespace GentlmenBot
                 "business trips", "trips", "cover", "insurance", "risk", "employee", "face", ));
             Questions.Add(new Question("Where can Igeta branded T-shirt/ other merch?",
                 "Ask HR",
-                ""));
+                "benefit", "tshirt", "merch", "where"));
             Questions.Add(new Question("Do we have any branded notepads/pens/umbrella?",
                 "We have notepads, pens, umbrella",
-                ""));
+                "brand", "benefits", "notepad", "umbrella", "pen"));
             Questions.Add(new Question("What idea incubator do we have?",
                 "Idea Incubator projects are projects that are primarily intended for people to learn new skills, but are run as projects following the Amdaris SDLC in order to start forming teams ready for new projects.",
-                ""));
+                "idea", "incubator", "we have"));
             Questions.Add(new Question("What current projects do we have?",
                 "Advance",
-                ""));
+                "projects", "we have", "current"));
             Questions.Add(new Question("What tech stacks are used in the projects?",
                 "Frontend: HTML, CSS, React, JS, Typescript, Material UI, Backend: .NET Core, C#, Entity Framework, SQL, XUnit",
-                ""));
+                "tech", "project", "used", "stacks"));
             Questions.Add(new Question("How can I change the project?",
                 "You need do this stages: ​Request to change the project, ​Review of request, Final approval, Replacing employee, Confirmation, Commencement, ​IT security",
-                ""));
+                "change", "project"));
             Questions.Add(new Question("Where can I print at the office?",
                 "Find printer and print",
-                ""));
+                "office", "print", "can i"));
             Questions.Add(new Question("How to request an additional monitor?",
                 "With support request",
-                ""));
+                "request", "additional", "monitor", "devices"));
             Questions.Add(new Question("How to request a new chair?",
                 "With support request",
-                ""));
+                "furniture", "chair", "new"));
             Questions.Add(new Question("My lamp is broken, can Amdaris provide another one?",
                 "No, if it isn't amdaris lamp",
-                ""));
+                "furniture", "lamp", "provide"));
             Questions.Add(new Question("Where can I find paper for the printer?",
                 "With support request",
-                ""));
+                "printer", "paper", "where can i", "get"));
         }
 
         public static List<Question> FindAppropriateQuestion(string text)
