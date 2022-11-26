@@ -14,6 +14,7 @@ namespace GentlmenBot.Context
         public string EnglishCources { get; set; }
         public int EnglishCourcesCostCoverage { get; set; }
         public string PossibleMentor { get; set; }
-
+        public int HolidaysLeft { get; set; }
+        public string Region { get; set; }
     }
 }
