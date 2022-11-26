@@ -9,7 +9,6 @@ namespace GentlmenBot.Context
 
         public GentlemenContext()
         {
-            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
