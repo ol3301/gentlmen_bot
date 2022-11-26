@@ -47,7 +47,7 @@ namespace GentlmenBot
                 "period", "annual", "leave", "what"));
             Questions.Add(new Question("What expenses are covered whenthe business trips?",
                 "Business (or corporate) travel insurance covers different risks an employee might face during a business trip. The primary categories of coverage include trip cancellation, medical expenses, evacuation, and luggage or other personal loss.",
-                "business trips", "trips", "cover", "insurance", "risk", "employee", "face", ));
+                "business trips", "trips", "cover", "insurance", "risk", "employee", "face"));
             Questions.Add(new Question("Where can Igeta branded T-shirt/ other merch?",
                 "Ask HR",
                 "benefit", "tshirt", "merch", "where"));
