@@ -6,6 +6,7 @@
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,8 +16,14 @@ namespace GentlmenBot.Bots
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            var replyText = $"Echo: {turnContext.Activity.Text}";
-            await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+            var questions = Answers.FindAppropriateQuestion(turnContext.Activity.Text);
+
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in questions)
+                sb.AppendLine($"Question: {item.Name} - Answer: {item.Answer}");
+            
+            
+            await turnContext.SendActivityAsync(MessageFactory.Text(sb.ToString(), sb.ToString()), cancellationToken);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
