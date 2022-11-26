@@ -1,7 +1,30 @@
-﻿namespace GentlmenBot
+﻿using System.Collections.Generic;
+
+namespace GentlmenBot
 {
+    public class Question
+    {
+        public string Name { get; set; }
+        public string Answer { get; set; }
+        public string[] Tags { get; set; }
+
+        public Question(string name, string answer, params string[] tags)
+        {
+            Name = name;
+            Answer = answer;
+            Tags = tags;    
+        }
+    }
     public static class Answers
     {
+        public static List<Question> Questions { get; set; }
+        static Answers () 
+        {
+            Questions = new List<Question>();
+            Questions.Add(new Question("What type of certifications does Amadris cover?", 
+                "https://amdaris.sharepoint.com/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7BF2369EEE-9F5A-47C6-95D3-3A812B22C382%7D&file=Certifications%202020%20(5).xlsx&action=default&mobileredirect=true&DefaultItemOpen=1", 
+                "cover","certificate","type"));
+        }
         public static string What_type_of_certifications_does_Amadris_cover = "https://amdaris.sharepoint.com/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7BF2369EEE-9F5A-47C6-95D3-3A812B22C382%7D&file=Certifications%202020%20(5).xlsx&action=default&mobileredirect=true&DefaultItemOpen=1";
         public static string What_are_the_courses_Amdaris_covers = "asp.net core, java, java, english cources";
         public static string What_is_the_percent_of_money_Amdaris_covers_for_certification = "50%";
@@ -17,8 +40,6 @@
                 "Bolgaria" => PublicHolidays.Bolgaria,
                 _ => "Unknown"
             };
-
-            
         }
 
         public static string NeedToAttendToSomewhere = @"Tell your delivery lead ";
