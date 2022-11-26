@@ -12,41 +12,68 @@ namespace GentlmenBot
         {
             Name = name;
             Answer = answer;
-            Tags = tags;    
+            Tags = tags;
         }
     }
     public static class Answers
     {
         public static List<Question> Questions { get; set; }
-        static Answers () 
+        static Answers()
         {
             Questions = new List<Question>();
-            Questions.Add(new Question("What type of certifications does Amadris cover?", 
-                "https://amdaris.sharepoint.com/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7BF2369EEE-9F5A-47C6-95D3-3A812B22C382%7D&file=Certifications%202020%20(5).xlsx&action=default&mobileredirect=true&DefaultItemOpen=1", 
-                "cover","certificate","type"));
+            Questions.Add(new Question("What type of certifications does Amadris cover?",
+                "https://amdaris.sharepoint.com/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7BF2369EEE-9F5A-47C6-95D3-3A812B22C382%7D&file=Certifications%202020%20(5).xlsx&action=default&mobileredirect=true&DefaultItemOpen=1",
+                "cover", "certificate", "type"));
             Questions.Add(new Question("What are the courses Amdaris covers?",
                 "asp.net core, java, java, english cources",
                 ""));
-            Questions.Add(new Question("What is the % of money Amdaris coversfor certification?",
+            Questions.Add(new Question("What is the % of money Amdaris covers for certification?",
                 "50%",
                 ""));
             Questions.Add(new Question("What is the % of money Amdaris cover for courses?",
                 "50%",
                 ""));
-            Questions.Add(new Question("I need to attend a funeral,whom should Iannounce about this? Doesthe business providesome additional days for this kind of event?",
+            Questions.Add(new Question("I need to attend a funeral, whom should I announce about this? Does the business providesome additional days for this kind of event?",
                 "Tell your delivery lead",
                 ""));
             Questions.Add(new Question("What is the notice period for annual leave?",
                 "2 weaks",
                 ""));
-            Questions.Add(new Question("What expenses are covered whenthe business trips?",
+            Questions.Add(new Question("What expenses are covered when the business trips?",
                 "Business (or corporate) travel insurance covers different risks an employee might face during a business trip. The primary categories of coverage include trip cancellation, medical expenses, evacuation, and luggage or other personal loss.",
                 ""));
-            Questions.Add(new Question("Where can Igeta branded T-shirt/ other merch?",
+            Questions.Add(new Question("Where can I get a branded T-shirt/ other merch?",
                 "Ask HR",
                 ""));
-            Questions.Add(new Question("Dowe have any branded notepads/pens/umbrella?",
+            Questions.Add(new Question("Do we have any branded notepads/pens/umbrella?",
                 "We have notepads, pens, umbrella",
+                ""));
+            Questions.Add(new Question("What idea incubator do we have?",
+                "Idea Incubator projects are projects that are primarily intended for people to learn new skills, but are run as projects following the Amdaris SDLC in order to start forming teams ready for new projects.",
+                ""));
+            Questions.Add(new Question("What current projects do we have?",
+                "Advance",
+                ""));
+            Questions.Add(new Question("What tech stacks are used in the projects?",
+                "Frontend: HTML, CSS, React, JS, Typescript, Material UI, Backend: .NET Core, C#, Entity Framework, SQL, XUnit",
+                ""));
+            Questions.Add(new Question("How can I change the project?",
+                "You need do this stages: ​Request to change the project, ​Review of request, Final approval, Replacing employee, Confirmation, Commencement, ​IT security",
+                ""));
+            Questions.Add(new Question("Where can I print at the office?",
+                "Find printer and print",
+                ""));
+            Questions.Add(new Question("How to request an additional monitor?",
+                "With support request",
+                ""));
+            Questions.Add(new Question("How to request a new chair?",
+                "With support request",
+                ""));
+            Questions.Add(new Question("My lamp is broken, can Amdaris provide another one?",
+                "No, if it isn't amdaris lamp",
+                ""));
+            Questions.Add(new Question("Where can I find paper for the printer?",
+                "With support request",
                 ""));
         }
 
