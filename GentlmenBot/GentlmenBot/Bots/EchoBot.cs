@@ -21,6 +21,9 @@ namespace GentlmenBot.Bots
             StringBuilder sb = new StringBuilder();
             foreach (var item in questions)
                 sb.AppendLine($"Question: {item.Name} - Answer: {item.Answer}");
+
+            if(sb.ToString() == "")
+                sb.Append("couldn't find!");
             
             
             await turnContext.SendActivityAsync(MessageFactory.Text(sb.ToString(), sb.ToString()), cancellationToken);
