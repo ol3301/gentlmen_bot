@@ -16,7 +16,7 @@ namespace GentlmenBot
             Tags = tags;
         }
 
-        public bool CompareTags(string[] tags)
+        public bool Compare(string[] tags)
         {
             return Tags.Where(x => tags.Where(x1 => StringUtils.CalculateSimilarity(x, x1) > 0.70).ToList().Count > 0).Any();
         }
@@ -87,7 +87,7 @@ namespace GentlmenBot
         {
             var tags = text.Split(' ');
 
-            return Questions.Where(x => x.CompareTags(tags)).ToList();
+            return Questions.Where(x => x.Compare(tags)).ToList();
         }
 
         public static string GetPublicHolidays(string region)
