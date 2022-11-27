@@ -19,7 +19,7 @@ namespace GentlmenBot
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().UseUrls("https://localhost:3979;http://localhost:3978");
                 });
     }
 }
