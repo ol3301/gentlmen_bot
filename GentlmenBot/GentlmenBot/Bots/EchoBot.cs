@@ -16,6 +16,12 @@ namespace GentlmenBot.Bots
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
+            if(turnContext.Activity.Text.ToLower() == "help" || turnContext.Activity.Text.ToLower() == "/help")
+            {
+                var response = Answers.GetAllQuestions();
+                await turnContext.SendActivityAsync(MessageFactory.Text(response, response), cancellationToken);
+                return;
+            }
             var questions = Answers.FindAppropriateQuestion(turnContext.Activity.Text);
 
             StringBuilder sb = new StringBuilder();

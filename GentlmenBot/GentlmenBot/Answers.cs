@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace GentlmenBot
 {
@@ -88,6 +89,17 @@ namespace GentlmenBot
             var tags = text.Split(' ');
 
             return Questions.Where(x => x.Compare(tags)).ToList();
+        }
+
+        public static string GetAllQuestions()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("Here all supported questions: ");
+            foreach (var question in Questions)
+            {
+                sb.AppendLine(question.Name);
+            }
+            return sb.ToString();
         }
 
         public static string GetPublicHolidays(string region)
